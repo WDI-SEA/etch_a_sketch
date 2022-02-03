@@ -1,5 +1,5 @@
 // The magic happens here!
-// const pixel1 = document.querySelector(".pixel")
+const pixel1 = document.querySelector(".pixel")
 
 
 // pixel1.addEventListener("mouseenter", () => {
@@ -15,10 +15,14 @@ const boardGenerator = (numOfPixels) => {
         document.getElementById("screen").appendChild(pixels)
         pixels.addEventListener("mouseenter", () => {
             pixels.classList.add("colored-in")
+        })
+        pixel1.addEventListener("mouseenter", ()=> {
+            pixel1.classList.add("colored-in")
+        })
         clearBtn.addEventListener("click", () => {
                 // const pixels = document.querySelectorAll(".pixel")
-            pixels.classList.remove("colored-in")
-            })
+            pixels.classList.remove("colored-in");
+            pixel1.classList.remove("colored-in")
         })
     }
 }
