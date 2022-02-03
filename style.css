@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  /* background-color: black; */
 }
 
 .container {
@@ -22,10 +23,13 @@ body {
 }
 
 .pixel {
+    display: inline;
     border: 1px solid black;
     background-color: white;
     height: 1vh;
     width: 1vh;
+    margin: 0;
+    padding: 0;
 }
 
 .colored-in {
