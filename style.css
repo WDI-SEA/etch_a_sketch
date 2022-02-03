@@ -14,7 +14,7 @@ body {
 }
 
 #screen {
-    width: 80vw;
+    width: 80vh;
     height: 80vh;
     background-color: lightgrey;
     display: flex;
