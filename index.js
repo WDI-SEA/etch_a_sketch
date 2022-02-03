@@ -1,5 +1,5 @@
 // // The magic happens here!
-const buttonClear = document.getElementById("clear-screen-button");
+
 
 const createPixels = (pixelCount) => {
   for (let i = 1; i <= pixelCount; i++) {
@@ -25,6 +25,8 @@ const etchArea = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   createPixels(etchArea());
+  
+  const buttonClear = document.getElementById("clear-screen-button");
   buttonClear.addEventListener("click", () => {
     let allPixels = document.getElementsByClassName('pixel')
     for(let i = 0; i < allPixels.length;i++) {
