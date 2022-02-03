@@ -2,7 +2,6 @@ const etchScreen = document.querySelector("#screen")
 const pixel = document.querySelector(".pixel")
 const clearButton = document.querySelector("#clear-screen-button")
 
-
 document.addEventListener("DOMContentLoaded",()=>{
     populateBoard()
 
@@ -24,12 +23,13 @@ const populateBoard = () =>{
 }
 
 const clearBoard = () =>{
+    //get every pixel thats colored in
     const coloredPixels = document.querySelectorAll(".colored-in")
-    console.log(coloredPixels)
+    //loop over the array and remove the colored-in class
     for(let i = 0; i < coloredPixels.length; i++){
         coloredPixels[i].classList.remove("colored-in")
     }
     
 }
-
+//add event listener to "clear board" button, making it clear the board.
 clearButton.addEventListener('click',clearBoard)
