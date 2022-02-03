@@ -14,8 +14,8 @@ body {
 }
 
 #screen {
-    width: 80vw;
-    height: 80vh;
+    width: 500px;
+    height: 500px;
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
@@ -24,8 +24,8 @@ body {
 .pixel {
     border: 1px solid black;
     background-color: white;
-    height: 1vh;
-    width: 1vh;
+    height: 3px;
+    width: 3px;
 }
 
 .colored-in {
