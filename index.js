@@ -19,16 +19,27 @@ const boardGenerator = (numOfPixels) => {
         pixel1.addEventListener("mouseenter", ()=> {
             pixel1.classList.add("colored-in")
         })
-        clearBtn.addEventListener("click", () => {
-                // const pixels = document.querySelectorAll(".pixel")
-            pixels.classList.remove("colored-in");
-            pixel1.classList.remove("colored-in")
-        })
+        // clearBtn.addEventListener("click", () => {
+        //         // const pixels = document.querySelectorAll(".pixel")
+        //     pixels.classList.remove("colored-in");
+        //     pixel1.classList.remove("colored-in")
+        // })
     }
+}
+
+const clear = () => {
+    clearBtn.addEventListener("click", () => {
+        const pixels = document.querySelectorAll(".colored-in")
+        pixels.forEach((pixel) => {
+            pixel.classList.remove("colored-in")
+        })
+        // pixels.classList.remove("colored-in")
+    })
 }
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    boardGenerator(6175)
+    clear()
+    boardGenerator(7850)
 })
