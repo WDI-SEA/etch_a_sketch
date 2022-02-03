@@ -8,10 +8,7 @@ const createPixels = (pixelCount) => {
     document.getElementById("screen").appendChild(pixel);
     pixel.addEventListener("mouseenter", () => {
       pixel.classList.add("colored-in");
-    });
-    buttonClear.addEventListener("click", () => {
-      pixel.classList.remove("colored-in")
-    })
+    });    
   
   }
   
@@ -28,4 +25,10 @@ const etchArea = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   createPixels(etchArea());
+  buttonClear.addEventListener("click", () => {
+    let allPixels = document.getElementsByClassName('pixel')
+    for(let i = 0; i < allPixels.length;i++) {
+      allPixels[i].classList.remove('colored-in')
+    }
+  })
 });
