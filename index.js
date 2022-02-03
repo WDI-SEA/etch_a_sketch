@@ -20,9 +20,9 @@ const createPixels = (pixelCount) => {
 const etchArea = () => {
   const height = document.getElementById("screen").offsetHeight;
   const width = document.getElementById("screen").offsetWidth;
-  //   console.log(`${width} X ${height}`);
-  //const area = (width *height)/100;
-  const area = 6400;
+  console.log(`${width} X ${height}`);
+  const area = (width *height)/100;
+  //const area = 6400;
   return area;
 };
 
