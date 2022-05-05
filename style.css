@@ -22,14 +22,14 @@ body {
 }
 
 .pixel {
-    border: 1px solid black;
+    border: 1px solid rgb(220, 147, 38);
     background-color: white;
     height: 1vh;
     width: 1vh;
 }
 
 .colored-in {
-    background-color: black;    
+    background-color: rgb(11, 18, 123);    
 }
 
 
