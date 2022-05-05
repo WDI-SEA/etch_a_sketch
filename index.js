@@ -32,18 +32,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
     //     console.log('mouseenter')
     // })
 
-    // const screen = document.querySelector('#parent')
-
-    // screen.addEventListener('mouseenter', e => {
-    //     e.target.classList.add('colored-in')
-    // })
-
+    
+    // choose all instances of pixel div
+    // for each on add listen for a mouse enter
+    // change background to black :]
     document.querySelectorAll('.pixel').forEach(pixel => 
         pixel.addEventListener('mouseenter',() => pixel.style.backgroundColor = 'black')
         )
     
 
+    // clear btn
+    // on click, set pixelboard
 
+    document.querySelectorAll('.pixel').forEach(pixel => 
+        document.querySelector('#clear-screen-button').addEventListener('click',() => pixel.style.backgroundColor = 'white')
+        )
 
 
 
