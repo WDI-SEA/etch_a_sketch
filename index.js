@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //append the empty pixels to the screen
         screen.appendChild(emptyPixels)
         //fill the pixels when moused over
-        emptyPixels.addEventListener('mouseenter', pixelFill )
+        emptyPixels.addEventListener('mouseenter`', pixelFill )
     }
     //make the clear button work
      clearScreen.addEventListener('click', () => {
