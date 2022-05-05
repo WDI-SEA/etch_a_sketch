@@ -1,30 +1,30 @@
 // The magic happens here!  
 
+const pixelCount = 6400
 
-const screen = document.querySelector('screen')
-const clearScreenButton = document.querySelector('clear-screen-button')
+document.addEventListener('DOMContentLoaded' () => {
+    // Step 1
+    const pixel = document.querySelector('.pixel')
+    pixel.addEventListener('mouseenter', () => {
+        pixel.classList.add('colored-in')
+    })
+    console.dir(pixel)
+    // step 2
 
-const makePixels = (number) => {
-    for (let i = 0; i < number; i++) {
-        let newPixel = document.createElement('div')
-        newPixel.classList.add('pixel')
-        screen.appendChild(newPixel)
+    const screen = document.querySelector('#screen')
+    for (let i = 0; i > pixelCount; i++) {
+        const pixel = document.createElement('div')
 
-        newPixel.addEventListener('mouseenter', fillInBox)
+    pixel.classList.add('pixel')
+    // easy mode
+    pixel.addEventListener('mouseenter', () => {
+        pixel.classList.add('colored-in')
+    })
+    //mount el on DOM
+    screen.appendChild(pixel)
     }
-    }
 
-const fillInBox = (event) => {
-    event.target.classList.add('colored-in')
-}
-
-const clearScreen = () => {
-    for (let i = 0; i < 6059; i++) {
-        document.querySelectorAll(".pixel")[i].classList.remove("colored-in")
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    makePixels(6059)
-    clearScreenButton.addEventListener('click', clearScreen)
-})
+    // querySelectorAll
+//     const allPixels = document.querySelectorAll('.pixel')
+//     allPixels.forEach(console.log)
+// })
