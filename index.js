@@ -8,9 +8,7 @@
 
 // clear button will return all divs to #pixel class
 
-const pixel = document.querySelector('.pixel')
 
-const screen = document.getElementById('screen')
 const pixelBoard = () => {
     //multiply the number of pixel divs
     for(let i = 0; i < 7496; i++){
@@ -23,14 +21,26 @@ const pixelBoard = () => {
     } 
 }
 
+    
+
 document.addEventListener('DOMContentLoaded', ()=>{
-    
-    pixel.addEventListener('mouseenter', event => {
-        pixel.style.backgroundColor = 'black'
-        console.log('mouseenter')
-    })
-    pixelBoard()
-    
+     pixelBoard() // fills pixels
+
+    // single pixel event
+    // pixel.addEventListener('mouseenter', e => {
+    //     pixel.style.backgroundColor = 'black'
+    //     console.log('mouseenter')
+    // })
+
+    // const screen = document.querySelector('#parent')
+
+    // screen.addEventListener('mouseenter', e => {
+    //     e.target.classList.add('colored-in')
+    // })
+
+    document.querySelectorAll('.pixel').forEach(pixel => 
+        pixel.addEventListener('mouseenter',() => pixel.style.backgroundColor = 'black')
+        )
     
 
 

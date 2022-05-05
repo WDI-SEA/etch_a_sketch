@@ -32,6 +32,9 @@ body {
 
 .colored-in {
     background-color: black; 
+    height: 1vh;
+    width: 1vh;
+    border: 1px solid black;
 }
 
 
