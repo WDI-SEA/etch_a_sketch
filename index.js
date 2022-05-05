@@ -27,4 +27,10 @@ document.addEventListener('DOMContentLoaded' () => {
     // querySelectorAll
 //     const allPixels = document.querySelectorAll('.pixel')
 //     allPixels.forEach(console.log)
-// })
+// 
+     document.querySelector('#clear-screen-button').addEventListener('click', () => {
+        const pixels = Array.from(document.querySelectorAll('.pixel'))
+        pixels.forEach(pixel => pixel.classList.remove('colored-in'))
+ })
+
+})
