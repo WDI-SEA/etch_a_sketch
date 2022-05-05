@@ -19,6 +19,8 @@ body {
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
+    /* take up the empty space */
+    align-content: flex-start; 
 }
 
 .pixel {
@@ -30,9 +32,6 @@ body {
 
 .colored-in {
     background-color: black; 
-    height: 1vh;
-    width: 1vh;  
-    border: 1px solid black; 
 }
 
 
