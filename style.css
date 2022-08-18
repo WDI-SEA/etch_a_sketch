@@ -14,8 +14,8 @@ body {
 }
 
 #screen {
-    width: 80vw;
-    height: 80vh;
+    width: 800px;
+    height: 800px;
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
