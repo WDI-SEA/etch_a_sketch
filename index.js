@@ -7,7 +7,7 @@ pixel.addEventListener('mouseenter', (e) => {
     pixel.classList.add('colored-in')
 })
 
-for (let i = 0; i < 7433; i++) {
+for (let i = 0; i < 7523; i++) {
     let newPixel = document.createElement('div')
     newPixel.classList.add('pixel')
     newPixel.addEventListener('mouseenter', function(e){
