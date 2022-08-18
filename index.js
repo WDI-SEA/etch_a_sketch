@@ -2,10 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const clearButton = document.querySelector('#clear-screen-button')
-    clearButton.addEventListener('click', () => {
-        mousePixel.classList.remove('colored-in')
-    })
+
 
     // to estimate screen size based on user -- works for 23 inch screen
     // with moderate view.
@@ -30,13 +27,20 @@ document.addEventListener('DOMContentLoaded', () => {
             screen.appendChild(div)
             div.addEventListener('mouseenter', (e) => {
                 e.target.classList.add('colored-in')
-            })
-            clearButton.addEventListener('click', () => {
-                div.classList.remove('colored-in')
-            })
+            })   
         }
-       // i do not know why this works.
     }
+
+    // made a functioning and logical clearButton, i know how this one works. 
+
+    const clearButton = document.getElementById('clear-screen-button')
+    clearButton.addEventListener('click', () => {
+        const blackPixels = document.querySelectorAll('.pixel')
+        blackPixels.forEach(div => {
+            div.classList.remove('colored-in')
+            
+        })
+    })
     
     setGrid(screenGetSize())
 })
