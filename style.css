@@ -20,6 +20,7 @@ body {
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
+    overflow:hidden;
 }
 
 .pixel {
