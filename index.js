@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // to estimate screen size based on user -- works for 23 inch screen
     // with moderate view.
+    // sw * sh * .8 should account for the area (8% margin) had to fiddle with the actual coefficient
     const screenGetSize = () => {
         let screenW = screen.width 
         let screenH = screen.height 
@@ -14,10 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // takes in screensize and populates screen 
-    // gives each dive the class of pixel and the event listner
-    // for mouse enter.
-    // also adds remove functionality.
+    // takes in screen size and populates screen 
+    // gives each dive the class of pixel and the event listener
+    // for 'mouseenter'.
+    
 
     const setGrid = (screenSize) => {
         for (let i = 0; i < screenSize; i++) {
