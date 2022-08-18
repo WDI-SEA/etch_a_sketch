@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
  const screen = document.getElementById("screen")
- const clearButton= document.getElementById("clear-screen-button")
+ //const clearButton= document.getElementById("clear-screen-button")
 
 
 
@@ -14,23 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 const pixels = document.querySelectorAll(".pixel")
 pixels.forEach(pixel => {
     pixel.addEventListener("mouseenter", (e) =>{
-        pixel.style.backgroundColor = "black"
+        pixel.style.backgroundColor = "green"
     
     } )
     
 })
-
-clear.addEventListener('click', (e) => {
+const clearButton= document.getElementById("clear-screen-button")
+clearButton.addEventListener('click', (e) => {
     // clear out both list while loops
     pixels.forEach(pixel => {
     pixel.style.backgroundColor = 'white'
 })
 })
 
-// const clearScreen = document.querySelectorAll(".clear-screen-button")
-// clearButton.addEventListener
-// pixels.forEach(pixel => {
-//     pixel.style.backgroundColor ="white"
 })
 
 
