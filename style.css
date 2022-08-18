@@ -22,10 +22,13 @@ body {
 }
 
 .pixel {
+    display: flex;
     border: 1px solid black;
     background-color: white;
     height: 1vh;
     width: 1vh;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .colored-in {
