@@ -19,6 +19,7 @@ body {
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
+    line-height: 0;
 }
 
 .pixel {
