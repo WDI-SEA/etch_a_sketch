@@ -1,8 +1,9 @@
 // The magic happens here!
 document.addEventListener('DOMContentLoaded', () => {
-    // 
+    
 
     let etchBox = document.querySelector('#screen');
+    let clear = document.querySelector('#clear-screen-button');
     
     for(let i = 0; i < 6824; i++) {
         var makePixels = document.createElement('div');
@@ -35,7 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     etchBox.addEventListener('click', etchasketch)
     
-    
+    clear.addEventListener('click', () => {
+        p.forEach(e => {
+            e.style.backgroundColor = 'rgb(255, 255, 255';
+        })
+    })
     
         
 
