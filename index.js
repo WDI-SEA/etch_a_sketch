@@ -20,7 +20,7 @@ const createPixels = (number) => {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    createPixels(5000)
+    createPixels(9999)
     clear.addEventListener('click', () => {
         const pixels = document.querySelectorAll('.pixel')
         for (let i = 0; i < pixels.length; i++) {
