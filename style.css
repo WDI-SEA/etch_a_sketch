@@ -1,5 +1,7 @@
 body {
   margin: 0px;
+  background-color: rgb(255, 180, 82);
+
 }
 
 .container {
@@ -16,23 +18,30 @@ body {
 #screen {
     width: 80vw;
     height: 80vh;
-    background-color: lightgrey;
+    background-color: rgb(255, 180, 82);
     display: flex;
     flex-wrap: wrap;
 }
 
 .pixel {
-    border: 1px solid black;
+    border: 1px solid rgb(251, 255, 0);
     background-color: white;
     height: 1vh;
     width: 1vh;
 }
 
 .colored-in {
-    background-color: black;    
+    background-color: rgb(170, 0, 255);    
 }
 
-
+#clear-screen-button {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(194, 71, 255);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
 #clear-screen-button:hover {
     cursor: pointer;
 }
