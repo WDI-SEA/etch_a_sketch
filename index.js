@@ -1,42 +1,24 @@
-const sketch = () => {
-    const sketch = document.querySelector('#screen')
+let screen = document.querySelector('#screen')
+let pixel = document.querySelector('.pixel')
+let allPixels = document.getElementsByClassName('.pixel')
+let clearButton = document.querySelector('#clear-screen-button')
 
-    // while something is in the element, remove it
-    while (sketch.firstChild) {
-        
-        sketch.removeChild(sketch.firstChild)
+pixel.addEventListener('mouseenter', (e) => {
+    pixel.classList.add('colored-in')
+})
+
+for (let i = 0; i < 5719; i++) {
+    let newPixel = document.createElement('div')
+    newPixel.classList.add('pixel')
+    newPixel.addEventListener('mouseenter', function(e){
+        e.target.classList.add('colored-in')
+    })
+screen.append(newPixel)
+}       
+
+clearButton.addEventListener("click", (e) => {
+    let everyPixel = document.querySelectorAll('pixel')
+    for (let i = 0; everyPixel.length; i++) {
+        everyPixel[i].classList.remove('colored-in')
     }
-
-    for (let i = 0; i < 1000; i++) {
-        // create the element
-
-        const screen = document.createElement('pixel')
-        // set the properties
-
-        screen.classList.add('pixel')
-        screen.style.backgroundColor = randomRGB()
-        screen.addEventListener('mouseEnter', event => {
-            console.log(event.target.style.backgroundColor)
-            const color = event.target.style.backgroundColor
-            // make a new square
-
-            const newPixel = document.createElement('div')
-            // set the props of the square
-
-            newPixel.classList.add('pixel')
-            newPixel.style.backgroundColor = color
-            // append square to the DOM tree
-
-            document.querySelector('#screen').appendChild(newPixel)
-        })
-        // append the element to the DOM tree
-
-        sketch.appendChild(square)
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const generate = document.querySelector('#generate')
-    generate.addEventListener('mouseEnter', sketch)
 })
