@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }  
 
     const etchBoard = () => {
-        for (i = 0; i < 8000; i++) {
+        for (let i = 0; i < 8000; i++) {
             const board = document.createElement("div")
             board.classList.add("pixel")
             board.addEventListener("mouseover", mouseHover)
@@ -17,11 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     etchBoard()
 
+    
+
     clearButton.addEventListener("click", () => {
         while(screen.firstChild) {
             screen.removeChild(screen.firstChild)
         }
-        for (i = 0; i < 8000; i++) {
+        for (let i = 0; i < 8000; i++) {
             const board = document.createElement("div")
             board.classList.add("pixel")
             board.addEventListener("mouseover", mouseHover)

@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  background-color: chartreuse;
 }
 
 .container {
@@ -25,13 +26,13 @@ body {
 .pixel {
    
     border: 1px solid black;
-    background-color: white;
+    background-color: turquoise;
     height: 1vh;
     width: 1vh;
 }
 
 .colored-in {
-    background-color: black;    
+    background-color: hotpink;    
 }
 
 
