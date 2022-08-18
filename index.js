@@ -10,24 +10,24 @@ const sketch = () => {
     for (let i = 0; i < 1000; i++) {
         // create the element
 
-        const square = document.createElement('div')
+        const screen = document.createElement('pixel')
         // set the properties
 
-        square.classList.add('square')
-        square.style.backgroundColor = randomRGB()
-        square.addEventListener('mouseenter', event => {
+        screen.classList.add('pixel')
+        screen.style.backgroundColor = randomRGB()
+        screen.addEventListener('mouseEnter', event => {
             console.log(event.target.style.backgroundColor)
             const color = event.target.style.backgroundColor
             // make a new square
 
-            const newSquare = document.createElement('div')
+            const newPixel = document.createElement('div')
             // set the props of the square
 
-            newSquare.classList.add('square')
-            newSquare.style.backgroundColor = color
+            newPixel.classList.add('pixel')
+            newPixel.style.backgroundColor = color
             // append square to the DOM tree
 
-            document.querySelector('#my-palette').appendChild(newSquare)
+            document.querySelector('#screen').appendChild(newPixel)
         })
         // append the element to the DOM tree
 
@@ -38,5 +38,5 @@ const sketch = () => {
 document.addEventListener('DOMContentLoaded', () => {
     
     const generate = document.querySelector('#generate')
-    generate.addEventListener('hover', makePalette)
+    generate.addEventListener('mouseEnter', sketch)
 })
