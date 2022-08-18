@@ -1,11 +1,6 @@
 
-// to encorporate the pre existing div
-document.addEventListener('DOMContentLoaded', () => {
-    const mousePixel = document.querySelector('.pixel')
-    mousePixel.addEventListener('mouseenter', (e) => {
-        e.target.classList.add('colored-in')
-    })
 
+document.addEventListener('DOMContentLoaded', () => {
 
     const clearButton = document.querySelector('#clear-screen-button')
     clearButton.addEventListener('click', () => {
@@ -40,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.classList.remove('colored-in')
             })
         }
-       
+       // i do not know why this works.
     }
     
     setGrid(screenGetSize())
