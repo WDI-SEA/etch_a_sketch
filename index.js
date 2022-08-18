@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const screen = document.querySelector('#screen')
-    for (let i = 0; i < 6400; i++) {
+    for (let i = 0; i < 6425; i++) {
         const div = document.createElement('div');
         div.classList.add('pixel');
         screen.append(div);
