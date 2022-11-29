@@ -1,6 +1,18 @@
 // The magic happens here!
 const container = document.querySelector(".container")
-const screen = document.getElementById("screen")
-const pixel = document.querySelector(".pixel")
+const screen = document.querySelector("#screen")
 const clearScreenButton = document.getElementById("clear-screen-button")
-const pixels = document.querySelectorAll(".pixel")
+const pixel = document.querySelector(".pixel")
+
+let allPixels = document.querySelectorAll(".pixel")
+pixel.addEventListener("mouseenter", (e) => {
+  pixel.classList.add("colored-in")
+})
+for (let i = 0; i < 7000; i++) {
+  let newPixel = document.createElement("div")
+  newPixel.classList.add("pixel")
+  newPixel.addEventListener("mouseenter", function (e) {
+    e.target.classList.add("colored-in")
+  })
+  screen.append(newPixel)
+}
