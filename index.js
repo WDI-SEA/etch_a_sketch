@@ -1,27 +1,64 @@
-// grab html elements
+// grab the elements
 const container = document.querySelector('.container')
 const screen = document.querySelector('#screen')
 const pixel = document.querySelector('.pixel')
 const clearBtn = document.querySelector('#clear-screen-button')
 
-//grabing the top left pixel
-pixel.addEventListener('mouseenter', addColor)
+// put listener on the pixel 
 
-const addColor = (event) => {
-    console.log ('it worked')
+pixel.addEventListener('mouseenter', () => {
+    // makes pixel black when hovered on
+    pixel.classList.add('colored-in')
+})
+// loop through and make new pixels
+for (let i = 0; i < 4500; i++) {
+    let newPixel = document.createElement('div')
+    newPixel.classList.add('pixel')
+
+    //add mouseenter functionality
+    newPixel.addEventListener('mouseenter', (e) => {
+        e.target.classList.add('colored-in')
+    })
+    //append pixels to screen
+    screen.append(newPixel)
 }
 
+//make clear btn work
+
+let clearFunction = function() {
+    let everyPixel = document.querySelectorAll('.pixel')
+    everyPixel.forEach(pixel => {
+        pixel.classList.remove ('colored-in')
+    })
+}
+
+clearBtn.addEventListener('click', clearFunction)
 
 
 
 
+
+
+
+
+
+
+
+
+
+// // grab html elements
+// const container = document.querySelector('.container')
+// const screen = document.querySelector('#screen')
+// const pixel = document.querySelector('.pixel')
+// const clearBtn = document.querySelector('#clear-screen-button')
 
 // // wait for DOM to load 
 // document.addEventListener('DOMContentLoaded', () => {
 //     makePixels()
 // })
 
-// // make the top left pixel a black background when hoverd on 
+
+// // make the top left pixel a black background when hovered on 
 // const addColor = (event) => {
 //     // console.log('it worked!')
 //     // pixel.classList.add ('colored-in')
@@ -48,6 +85,19 @@ const addColor = (event) => {
 //     })
 // })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // // make the pixels across the screen 
 // // //function expression
 // // const makePixels = () => {
@@ -70,6 +120,15 @@ const addColor = (event) => {
 // //     //event is the event object event.target is the speciic target that triggered the event
 // //     event.target.classList.add ('colored-in')
 // // }
+
+
+
+
+
+
+
+
+
 
 
 // // clearBtn.addEventListener('click', () => {
