@@ -11,8 +11,14 @@ pixel.addEventListener("mouseenter", (e) => {
 for (let i = 0; i < 7000; i++) {
   let newPixel = document.createElement("div")
   newPixel.classList.add("pixel")
-  newPixel.addEventListener("mouseenter", function (e) {
+  newPixel.addEventListener("mouseenter", (e) => {
     e.target.classList.add("colored-in")
   })
   screen.append(newPixel)
 }
+
+clearScreenButton.addEventListener("click", (e) => {
+  document.querySelectorAll(".pixel").forEach((p) => {
+    p.classList.remove("colored-in")
+  })
+})
