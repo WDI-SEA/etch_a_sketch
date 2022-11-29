@@ -1,3 +1,7 @@
+:root {
+    --square-side:
+}
+
 body {
   margin: 0px;
 }
@@ -28,11 +32,8 @@ body {
     width: 1vh;
 }
 
-.colored-in {
-    background-color: black;    
-}
-
 
 #clear-screen-button:hover {
+    background-color: green;
     cursor: pointer;
 }
